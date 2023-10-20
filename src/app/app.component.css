@@ -1,0 +1,16 @@
+body{
+  justify-content: center;
+  text-align: center;
+  background-color: whitesmoke;
+}
+button {
+  justify-content: center;
+  display: block;
+  margin: 0 auto 20px;
+  width: 150px; /* Defina a largura desejada */
+  height: 40px; /* Defina a altura desejada */
+}
+
+.button-container {
+  text-align: center;
+}
