@@ -1,2 +1,33 @@
-body{background-color: whitesmoke;
+body{background-color: rgb(232, 226, 226);
 }
+
+nav {
+  margin-top: 20px;
+  margin-left: 60px;
+  margin-right: 60px;
+  border-radius: 10px;
+}
+.logo img {
+  width: 100px; /* Largura do logotipo */
+  height: auto; /* A altura se ajustará automaticamente para manter a proporção */
+}
+
+a{
+
+  margin-right: 60px;
+}
+
+.banner{
+
+  margin-top: 50px;
+  margin-left: 65px;
+
+}
+
+
+.email{
+  margin-left: 650px;
+  margin-top: 70px;
+}
+
+
