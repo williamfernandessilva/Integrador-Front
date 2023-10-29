@@ -5,6 +5,11 @@ import { AlunosComponent } from './alunos/alunos.component';
 import { CoordenadorComponent } from './coordenador/coordenador.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { ProfessoresComponent } from './professores/professores.component';
+import { HistoricoComponent } from './historico/historico.component';
+import { CadastrarProfessorComponent } from './cadastrar-professor/cadastrar-professor.component';
+import { GradeProfessorComponent } from './grade-professor/grade-professor.component';
+import { GradeAlunoComponent } from './grade-aluno/grade-aluno.component';
+
 
 
 const routes: Routes = [
@@ -13,6 +18,13 @@ const routes: Routes = [
   {path: 'coordenador',   component : CoordenadorComponent},
   {path: 'inicio', component : InicioComponent},
   {path: 'cadastro', component : CadastroComponent},
+  {path: 'historico', component : HistoricoComponent},
+  {path: 'cadastrarprofessor', component : CadastrarProfessorComponent},
+  {path: 'gradeprofessor', component : GradeProfessorComponent},
+  {path: 'gradealuno', component : GradeAlunoComponent},
+
+
+
 
 ];
 

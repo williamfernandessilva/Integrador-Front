@@ -9,6 +9,10 @@ import { CoordenadorComponent } from './coordenador/coordenador.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { InicioComponent } from './inicio/inicio.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
+import { HistoricoComponent } from './historico/historico.component';
+import { CadastrarProfessorComponent } from './cadastrar-professor/cadastrar-professor.component';
+import { GradeProfessorComponent } from './grade-professor/grade-professor.component';
+import { GradeAlunoComponent } from './grade-aluno/grade-aluno.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,11 @@ import { CadastroComponent } from './cadastro/cadastro.component';
     ProfessoresComponent,
     CoordenadorComponent,
     InicioComponent,
-    CadastroComponent
+    CadastroComponent,
+    HistoricoComponent,
+    CadastrarProfessorComponent,
+    GradeProfessorComponent,
+    GradeAlunoComponent
   ],
   imports: [
     BrowserModule,
