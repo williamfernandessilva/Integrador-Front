@@ -1,4 +1,5 @@
 
+
 <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
     <div class="logo">
@@ -6,7 +7,7 @@
   </div>
   <form class="d-flex" style="margin-left: 400px; width: 500px;" role="search">
     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success" type="submit">Search</button>
+    <button  style="background-color: red; color: white;   border-radius: 10px;" type="submit">Search</button>
   </form>
 
 
@@ -17,13 +18,91 @@
 
        <li>
         <li class="nav-item">
-        <a class="nav-link active" aria-current="page" routerLink="/professores">Professor</a>
+          <a class="nav-link active" aria-current="page" routerLink="/professores">Professor</a>
 
         <li>
           <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="/cadastro">Coordenador</a>
+          <a class="nav-link active" aria-current="page" style="margin-left: 8 0px;" routerLink="/cadastro">Coordenador</a>
+
+          <li>
+            <li class="nav-item">
+              <li>
+                <li class="nav-item">
+
+
 
       </ul>
     </div>
   </div>
 </nav>
+
+
+<div style="background-color: white; margin-top: 50px; border-radius: 15px; margin-left: 60px; margin-right: 60px;">
+  <div class="row">
+    <div class="col ">
+
+        <input type="text" formControlName="Ra" style=" margin-top: 200px; ;margin-left: 100px;"   class="form-control" id="curso:" placeholder="Curso:">
+        <input type="text" formControlName="Ra" style=" margin-top: 20px; ;margin-left: 100px;"   class="form-control" id="semestre:" placeholder="Semestre:">
+        <input type="text" formControlName="Ra" style=" margin-top: 20px; ;margin-left: 100px;"   class="form-control" id="horario:" placeholder="Horário:">
+        <input type="text" formControlName="Ra" style=" margin-top: 20px; ;margin-left: 100px;"   class="form-control" id="professor:" placeholder="Professor:">
+        <input type="text" formControlName="Ra" style=" margin-top: 20px; ;margin-left: 100px; margin-bottom: 70px;"   class="form-control" id="data:" placeholder="Data:">
+        <button class="" style=" margin-top: 100px; margin-left: 200px; margin-bottom: 70px;  background-color: red; color: aliceblue;  border-radius: 5px; width: 200px; height: 80px;" routerLink="/inicio">Voltar</button>
+
+    </div>
+    <div class="col"  >
+      <h1 style="margin-left: 200px; margin-top: 50px;">Página Aluno</h1>
+
+      <div class="mb-2"  >
+
+      </div>
+      <div class="mb-3">
+
+
+      </div>
+    </div>
+    <div class="col" style="margin-top: 250px; margin-right: 300px;">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Professor</th>
+            <th scope="col">Curso</th>
+            <th scope="col">Horario</th>
+            <th scope="col">Salas</th>
+            <th scope="col">Data</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>kaue</td>
+            <td>quimica</td>
+            <td>00:00</td>
+            <td>08</td>
+            <td>10/10/2023</td>
+          </tr>
+
+          <tr>
+            <th scope="row">2</th>
+            <td>Teste</td>
+            <td>Teste</td>
+            <td>Teste</td>
+            <td>Teste</td>
+            <td>Teste</td>
+          </tr>
+
+
+        </tbody>
+      </table>
+
+      <button class="" style=" margin-top: 245px; margin-left: 200px; margin-bottom: 70px;  background-color: red; color: aliceblue;  border-radius: 5px; width: 200px; height: 80px;" >Proximo</button>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+

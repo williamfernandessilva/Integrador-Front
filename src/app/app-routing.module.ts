@@ -12,6 +12,7 @@ import { GradeAlunoComponent } from './grade-aluno/grade-aluno.component';
 
 
 
+
 const routes: Routes = [
   {path: 'professores', component : ProfessoresComponent},
   {path: 'alunos',  component : AlunosComponent},
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path: 'cadastrarprofessor', component : CadastrarProfessorComponent},
   {path: 'gradeprofessor', component : GradeProfessorComponent},
   {path: 'gradealuno', component : GradeAlunoComponent},
+
 
 
 

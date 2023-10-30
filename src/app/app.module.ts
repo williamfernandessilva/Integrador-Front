@@ -14,6 +14,7 @@ import { CadastrarProfessorComponent } from './cadastrar-professor/cadastrar-pro
 import { GradeProfessorComponent } from './grade-professor/grade-professor.component';
 import { GradeAlunoComponent } from './grade-aluno/grade-aluno.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
