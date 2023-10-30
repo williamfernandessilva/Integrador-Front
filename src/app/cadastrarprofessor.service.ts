@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import {  Cadrastarprofessor } from './cadastrarprofessor';
+import {  Cadastarprofessor, } from './cadastrarprofessor';
 
 @Injectable({
   providedIn: 'root'
@@ -14,20 +14,20 @@ export class CadastrarprofessorService {
 
   constructor( private http: HttpClient) { }
 
-  getProfessor(): Observable<Cadrastarprofessor[]>{
-    return this.http.get<Cadrastarprofessor[]>(this.url)
+  getProfessor(): Observable<Cadastarprofessor[]>{
+    return this.http.get<Cadastarprofessor[]>(this.url)
    }
 
 
-   save(cadastarprofessor:Cadrastarprofessor):Observable<Cadrastarprofessor>{
-    return this.http.post<Cadrastarprofessor>(this.url,cadastarprofessor);
+   save(cadastarprofessor:Cadastarprofessor):Observable<Cadastarprofessor>{
+    return this.http.post<Cadastarprofessor>(this.url,cadastarprofessor);
 
    }
-   update(cadastarprofessor:Cadrastarprofessor): Observable<Cadrastarprofessor>
+   update(cadastarprofessor:Cadastarprofessor): Observable<Cadastarprofessor>
   {
-    return this.http.put<Cadrastarprofessor>(`${this.url}/${cadastarprofessor.id}`, cadastarprofessor);
+    return this.http.put<Cadastarprofessor>(`${this.url}/${cadastarprofessor.id}`, cadastarprofessor);
   }
-   delete(cadastarprofessor:Cadrastarprofessor):Observable<void>{
+   delete(cadastarprofessor:Cadastarprofessor):Observable<void>{
     return this.http.delete<void>(`${this.url}/${cadastarprofessor.id}`);
 
 }

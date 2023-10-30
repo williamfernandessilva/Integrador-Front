@@ -1,4 +1,4 @@
-import { Cadrastarprofessor } from './../cadastrarprofessor';
+import { Cadastarprofessor, } from './../cadastrarprofessor';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { CadastrarprofessorService } from '../cadastrarprofessor.service';
@@ -91,7 +91,7 @@ clean(){
   this.isEditing = false;
 }
 
-edit(cadastrarprofessor: Cadrastarprofessor){
+edit(cadastrarprofessor: Cadastarprofessor){
   this.formGroupClient.setValue(cadastrarprofessor);
   this.isEditing = true;
 
@@ -100,7 +100,7 @@ edit(cadastrarprofessor: Cadrastarprofessor){
 
 }
 
-delete(cadastrarprofessor: Cadrastarprofessor){
+delete(cadastrarprofessor: Cadastarprofessor){
   this.CadrastarprofessorService.delete(cadastrarprofessor).subscribe({
     next: ()=> this.loadClients()
   })

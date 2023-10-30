@@ -1,4 +1,4 @@
-export interface Cadrastarprofessor{
+export interface Cadastarprofessor{
   id : number;
   salas : string;
   nome : string;
