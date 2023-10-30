@@ -13,6 +13,8 @@ import { HistoricoComponent } from './historico/historico.component';
 import { CadastrarProfessorComponent } from './cadastrar-professor/cadastrar-professor.component';
 import { GradeProfessorComponent } from './grade-professor/grade-professor.component';
 import { GradeAlunoComponent } from './grade-aluno/grade-aluno.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -31,7 +33,10 @@ import { GradeAlunoComponent } from './grade-aluno/grade-aluno.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    ReactiveFormsModule,
+    NgbModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

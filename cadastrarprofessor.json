@@ -1,0 +1,23 @@
+{
+  "cadastrarprofessor": [
+    {
+      "id": 2,
+      "nome": "william",
+      "salas": "willgsvs@hotmail.com",
+      "data": "45717789890",
+      "materia": "45717789890",
+      "horario": "45717789890",
+      "curso": "11908765449"
+    },
+    {
+      "id": 3,
+      "nome": "awdasd",
+      "salas": "awdasd",
+      "data": "awdas",
+      "curso": "asdawd",
+      "semestre": "",
+      "materia": "dawd",
+      "horario": "sdawda"
+    }
+  ]
+}
