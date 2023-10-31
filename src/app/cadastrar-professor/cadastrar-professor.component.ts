@@ -1,4 +1,4 @@
-import { Cadastarprofessor, } from './../cadastrarprofessor';
+import { Cadastrarprofessor, } from './../cadastrarprofessor';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { CadastrarprofessorService } from '../cadastrarprofessor.service';
@@ -10,16 +10,10 @@ import { HttpClientModule } from '@angular/common/http';
   styleUrls: ['./cadastrar-professor.component.css']
 })
 export class CadastrarProfessorComponent {
-
-
-
+  cadastrarProfessor : Cadastrarprofessor[] = [];
   isEditing : Boolean = false;
   formGroupClient : FormGroup ;
-  Cadastarprofessor: any;
-  cadastrarprofessor: any;
   CadrastarprofessorService: any;
-  CadastrarprofessorService: any;
-  Cadastrarprofessor: any;
 
 
   constructor(private cadastrarprofessorService: CadastrarprofessorService,
@@ -39,13 +33,13 @@ horario : ['']
 }
 
 ngOnInit(): void {
-  this.loadClients();
+  this.loadProfessor();
 
 }
-loadClients() {
-  this.CadastrarprofessorService.getcadastarprofessor().subscribe(
+loadProfessor() {
+  this.cadastrarprofessorService.getProfessor().subscribe(
     {
-      next : (data: any) => this.Cadastrarprofessor = data
+      next : data=> this.cadastrarProfessor = data
     }
   );
 
@@ -57,7 +51,7 @@ save(){
         this.cadastrarprofessorService.update(this.formGroupClient.value).subscribe(
           {
             next: data => {
-              this.loadClients();
+              this.loadProfessor();
               this.formGroupClient.reset();
               this.isEditing = false;
 
@@ -74,7 +68,7 @@ else{
   this.cadastrarprofessorService.save(this.formGroupClient.value).subscribe(
   {
       next: data => {
-        this.cadastrarprofessor.push(data);
+        this.cadastrarProfessor.push(data);
         this.formGroupClient.reset();
       }
   }
@@ -91,8 +85,8 @@ clean(){
   this.isEditing = false;
 }
 
-edit(cadastrarprofessor: Cadastarprofessor){
-  this.formGroupClient.setValue(cadastrarprofessor);
+edit(cadastrarProfessor: Cadastrarprofessor){
+  this.formGroupClient.setValue(cadastrarProfessor);
   this.isEditing = true;
 
 
@@ -100,9 +94,9 @@ edit(cadastrarprofessor: Cadastarprofessor){
 
 }
 
-delete(cadastrarprofessor: Cadastarprofessor){
-  this.CadrastarprofessorService.delete(cadastrarprofessor).subscribe({
-    next: ()=> this.loadClients()
+delete(cadastrarProfessor: Cadastrarprofessor){
+  this.cadastrarprofessorService.delete(cadastrarProfessor).subscribe({
+    next: ()=> this.loadProfessor()
   })
 
 

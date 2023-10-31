@@ -47,7 +47,7 @@
   </div >
 
 
-  <div class="mb-2">
+  <div class="mb-2" >
     <label for="name" class="form-label">Nome:</label>
     <input type="text" formControlName="nome"    class="form-control" id="name" placeholder="Nome">
   </div>
@@ -77,8 +77,8 @@
     </div>
 
 
-  <button class="btn btn-primary me-1"(click)="save()">Salvar</button>
-  <button class="btn btn-secondary me-1"(click)="clean()">Limpar</button>
+  <button  style="background-color: red; color: white;   border-radius: 10px ;width: 80px; height: 40px; marg"(click)="save()">Salvar</button>
+  <button  style="background-color: red; color: white;   border-radius: 10px; width: 80px; height: 40px;margin-left: 10px;"(click)="clean()">Limpar</button>
 
 
 </form>
@@ -93,35 +93,44 @@
 <form>
 
 <div>
-<table class="table ">
+<table style="width: 1200px; margin-left: 350px; margin-top: 50px; " class="table ">
   <thead>
     <tr>
       <th scope="col">Id</th>
       <th scope="col">Nome</th>
-      <th scope="col">Email</th>
-      <th scope="col">Rg</th>
-      <th scope="col">Telefone</th>
-      <th scope="col">Estado</th>
+      <th scope="col">Salas</th>
+      <th scope="col">Data</th>
+      <th scope="col">Matéria</th>
+      <th scope="col">Horario</th>
+      <th scope="col">Curso</th>
+      <th scope="col"></th>
 
 
 
     </tr>
   </thead>
-  <tbody>
-          <tr *ngFor="let Cadastrarprofessor of cadastrarprofessor">
-            <th scope="row">{{Cadastrarprofessor.id}}</th>
-            <td>{{Cadastrarprofessor.nome}}</td>
-            <td>{{Cadastrarprofessor.salas}}</td>
-            <td>{{Cadastrarprofessor.data}}</td>
-            <td>{{Cadastrarprofessor.materia}}</td>
-            <td>{{Cadastrarprofessor.horario}}</td>
-            <td>{{Cadastrarprofessor.curso}}</td>
+  <tbody >
+
+          <tr  *ngFor="let cadastrarProfessor of cadastrarProfessor">
+            <th scope="row">{{cadastrarProfessor.id}}</th>
+            <td >{{cadastrarProfessor.nome}}</td>
+            <td>{{cadastrarProfessor.salas}}</td>
+            <td>{{cadastrarProfessor.data}}</td>
+            <td>{{cadastrarProfessor.materia}}</td>
+            <td>{{cadastrarProfessor.horario}}</td>
+            <td>{{cadastrarProfessor.curso}}</td>
+            <td>
+              <button type="button"  style="background-color: red; color: white;   border-radius: 10px; width: 80px; height: 40px;" (click)="edit(cadastrarProfessor)" >Editar</button>
+              <button type="button"  style="background-color: red; color: white;   border-radius: 10px; width: 80px; height: 40px; margin-left: 10px;"(click)="delete(cadastrarProfessor)">Excluir</button>
+            </td>
+
+
           </tr>
 
-
-
         </tbody>
+
       </table>
+
 
 
     </div>

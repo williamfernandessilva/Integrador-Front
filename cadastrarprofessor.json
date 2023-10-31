@@ -1,103 +1,14 @@
 {
   "cadastrarprofessor": [
     {
-      "id": 2,
-      "nome": "william",
-      "salas": "willgsvs@hotmail.com",
-      "data": "45717789890",
-      "materia": "45717789890",
-      "horario": "45717789890",
-      "curso": "11908765449"
-    },
-    {
-      "id": 3,
-      "nome": "awdasd",
-      "salas": "awdasd",
-      "data": "awdas",
-      "curso": "asdawd",
-      "semestre": "",
-      "materia": "dawd",
-      "horario": "sdawda"
-    },
-    {
-      "id": 4,
-      "nome": "awda",
-      "salas": "sdawda",
-      "data": "sdawda",
-      "curso": "dasda",
-      "semestre": "",
-      "materia": "sdawd",
-      "horario": "asdaw"
-    },
-    {
-      "id": 5,
-      "nome": "awda",
-      "salas": "sdawda",
-      "data": "sdawda",
-      "curso": "dasda",
-      "semestre": "",
-      "materia": "sdawd",
-      "horario": "asdaw"
-    },
-    {
       "id": 6,
-      "nome": "awda",
-      "salas": "sdawda",
-      "data": "sdawda",
-      "curso": "dasda",
-      "semestre": "",
-      "materia": "sdawd",
-      "horario": "asdaw"
-    },
-    {
-      "id": 7,
-      "nome": "awda",
-      "salas": "sdawda",
-      "data": "sdawda",
-      "curso": "dasda",
-      "semestre": "",
-      "materia": "sdawd",
-      "horario": "asdaw"
-    },
-    {
-      "id": 8,
-      "nome": "awda",
-      "salas": "sdawda",
-      "data": "sdawda",
-      "curso": "dasda",
-      "semestre": "",
-      "materia": "sdawd",
-      "horario": "asdaw"
-    },
-    {
-      "id": 9,
-      "nome": "awda",
-      "salas": "sdawda",
-      "data": "sdawda",
-      "curso": "dasda",
-      "semestre": "",
-      "materia": "sdawd",
-      "horario": "asdaw"
-    },
-    {
-      "id": 10,
-      "nome": "awdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-      "salas": "sdawda",
-      "data": "sdawda",
-      "curso": "dasda",
-      "semestre": "",
-      "materia": "sdawd",
-      "horario": "asdaw"
-    },
-    {
-      "id": 11,
-      "nome": "AWDAWWWWWWW",
-      "salas": "",
-      "data": "",
-      "curso": "",
-      "semestre": "",
-      "materia": "",
-      "horario": ""
+      "nome": "matheus",
+      "salas": "69",
+      "data": "9/09/1009",
+      "curso": "soxologia",
+      "semestre": null,
+      "materia": "sexologoaaaaaaaaaaaa",
+      "horario": "9:69"
     }
   ]
 }

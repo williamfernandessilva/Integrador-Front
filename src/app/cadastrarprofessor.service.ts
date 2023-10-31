@@ -1,33 +1,30 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import {  Cadastarprofessor, } from './cadastrarprofessor';
+import {  Cadastrarprofessor, } from './cadastrarprofessor';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CadastrarprofessorService {
-  getCadastarprofessor() {
-    throw new Error('Method not implemented.');
-  }
-  url = "  http://localhost:3000/cadastrarprofessor";
+  url = "  http://localhost:3004/cadastrarprofessor";
 
   constructor( private http: HttpClient) { }
 
-  getProfessor(): Observable<Cadastarprofessor[]>{
-    return this.http.get<Cadastarprofessor[]>(this.url)
+  getProfessor(): Observable<Cadastrarprofessor[]>{
+    return this.http.get<Cadastrarprofessor[]>(this.url)
    }
 
 
-   save(cadastarprofessor:Cadastarprofessor):Observable<Cadastarprofessor>{
-    return this.http.post<Cadastarprofessor>(this.url,cadastarprofessor);
+   save(cadastarprofessor:Cadastrarprofessor):Observable<Cadastrarprofessor>{
+    return this.http.post<Cadastrarprofessor>(this.url,cadastarprofessor);
 
    }
-   update(cadastarprofessor:Cadastarprofessor): Observable<Cadastarprofessor>
+   update(cadastarprofessor:Cadastrarprofessor): Observable<Cadastrarprofessor>
   {
-    return this.http.put<Cadastarprofessor>(`${this.url}/${cadastarprofessor.id}`, cadastarprofessor);
+    return this.http.put<Cadastrarprofessor>(`${this.url}/${cadastarprofessor.id}`, cadastarprofessor);
   }
-   delete(cadastarprofessor:Cadastarprofessor):Observable<void>{
+   delete(cadastarprofessor:Cadastrarprofessor):Observable<void>{
     return this.http.delete<void>(`${this.url}/${cadastarprofessor.id}`);
 
 }

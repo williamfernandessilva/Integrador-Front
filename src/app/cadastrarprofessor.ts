@@ -1,9 +1,9 @@
-export interface Cadastarprofessor{
+export interface Cadastrarprofessor{
   id : number;
   salas : string;
   nome : string;
   email : string;
-  Data : string;
+  data : string;
   curso : string;
   semestre : string;
   materia : string;
