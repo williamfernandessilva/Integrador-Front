@@ -21,10 +21,9 @@ export class CadastrarProfessorComponent {
 this.formGroupClient = formBuilder.group({
 id : [''],
 nome : [''],
-salas : [''],
+sala : [''],
 data : [''],
 curso : [''],
-semestre: [''],
 materia: [''],
 horario : ['']
 

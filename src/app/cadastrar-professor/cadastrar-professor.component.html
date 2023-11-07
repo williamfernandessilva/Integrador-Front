@@ -37,7 +37,7 @@
 
 
     <div class="col"  >
-      <h1 style="margin-left: 800px; margin-top: 50px;">Cadastrar Professor</h1>
+      <h1 style="margin-left: 720px; margin-top: 50px;">Cadastrar Professor</h1>
 
       <div class="mb-2" style="margin-top: 50px; margin-left: 200px; margin-right: 200px;" >
 
@@ -46,7 +46,6 @@
 
   </div >
 
-
   <div class="mb-2" >
     <label for="name" class="form-label">Nome:</label>
     <input type="text" formControlName="nome"    class="form-control" id="name" placeholder="Nome">
@@ -54,11 +53,11 @@
 
   <div class="mb-2">
     <label for="salas" class="form-label">Salas:</label>
-    <input type="email" formControlName="salas"   class="form-control" id="salas" placeholder="Salas">
+    <input type="email" formControlName="sala"   class="form-control" id="sala" placeholder="Salas">
   </div>
   <div class="mb-2">
     <label for="data" class="form-label">Data:</label>
-    <input type="text" formControlName="data"    class="form-control" id="data" placeholder="Data">
+    <input type="date" formControlName="data"    class="form-control" id="data" placeholder="Data">
   </div>
 
   <div class="mb-2">
@@ -114,7 +113,7 @@
           <tr  *ngFor="let cadastrarProfessor of cadastrarProfessor">
             <th scope="row">{{cadastrarProfessor.id}}</th>
             <td >{{cadastrarProfessor.nome}}</td>
-            <td>{{cadastrarProfessor.salas}}</td>
+            <td>{{cadastrarProfessor.sala}}</td>
             <td>{{cadastrarProfessor.data}}</td>
             <td>{{cadastrarProfessor.materia}}</td>
             <td>{{cadastrarProfessor.horario}}</td>

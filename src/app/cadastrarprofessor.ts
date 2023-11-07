@@ -1,11 +1,10 @@
 export interface Cadastrarprofessor{
   id : number;
-  salas : string;
+  sala : string;
   nome : string;
   email : string;
-  data : string;
+  data : Date;
   curso : string;
-  semestre : string;
   materia : string;
   horario : string;
 };

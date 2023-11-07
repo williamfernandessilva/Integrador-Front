@@ -35,71 +35,56 @@
 </nav>
 
 
-<div style="background-color: white; margin-top: 50px; border-radius: 15px; margin-left: 60px; margin-right: 60px;">
-  <div class="row">
-    <div class="col ">
+
+<div class="col"  >
+  <h1 style="text-align: center;margin-top: 30px;">Grade Alunos</h1>
 
 
-    </div>
-    <div class="col"  >
-      <h1 style="text-align: center; margin-top: 50px;">Grade alunos</h1>
 
-      <div style="margin-right: 150px;">
-      <input type="text" formControlName="Ra" style=" margin-top: 50px; ;margin-left: 100px;"   class="form-control" id="curso:" placeholder="Curso:">
-        <input type="text" formControlName="Ra" style="margin-top: 20px; ;margin-left: 100px;"   class="form-control" id="semestre:" placeholder="Semestre:">
-        <input type="text" formControlName="Ra" style=" margin-top: 20px; ;margin-left: 100px;"   class="form-control" id="horario:" placeholder="Horário:">
-      </div>
-        <table class="table table-bordered" style="margin-top: 100px;">
+        <div>
+        <table style="width: 1200px; margin-left: 350px; margin-top: 50px; " class="table ">
           <thead>
             <tr>
-              <th scope="col"></th>
+
               <th scope="col">Professor</th>
-              <th scope="col">Curso</th>
-              <th scope="col">Horario</th>
-              <th scope="col">Sala</th>
+              <th scope="col">Salas</th>
               <th scope="col">Data</th>
+              <th scope="col">Matéria</th>
+              <th scope="col">Horario</th>
+              <th scope="col">Curso</th>
+              <th scope="col"></th>
+
+
+
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>kaue</td>
-              <td>quimica</td>
-              <td>00:00</td>
-              <td>08</td>
-              <td>10/10/2023</td>
-            </tr>
+          <tbody >
 
-            <tr>
-              <th scope="row">2</th>
-              <td>Teste</td>
-              <td>Teste</td>
-              <td>Teste</td>
-              <td>Teste</td>
-              <td>Teste</td>
-            </tr>
+                  <tr  *ngFor="let cadastrarProfessor of cadastrarProfessor">
+                    <th>{{cadastrarProfessor.nome}}</th>
+                    <td>{{cadastrarProfessor.sala}}</td>
+                    <td>{{cadastrarProfessor.data}}</td>
+                    <td>{{cadastrarProfessor.materia}}</td>
+                    <td>{{cadastrarProfessor.horario}}</td>
+                    <td>{{cadastrarProfessor.curso}}</td>
+                    <td>
+                      <button type="button"  style="background-color: red; color: white;   border-radius: 10px; width: 80px; height: 40px; margin-left: 10px;"(click)="delete(cadastrarProfessor)">Excluir</button>
+                    </td>
 
 
-          </tbody>
-        </table>
+                  </tr>
 
-        <button class="" style=" margin-top: 150px; margin-left: 200px; margin-bottom: 20px;  background-color: red; color: aliceblue;  border-radius: 5px; width: 200px; height: 80px;"  routerLink="/coordenador">Voltar</button>
+                </tbody>
+
+              </table>
 
 
 
-      <div class="mb-2"  >
-
-      </div>
-      <div class="mb-3">
+            </div>
+        <button class="" style=" margin-top: 300px; margin-left: 800px; margin-bottom: 20px;  background-color: red; color: aliceblue;  border-radius: 5px; width: 200px; height: 80px;"  routerLink="/coordenador">Voltar</button>
 
 
-      </div>
-    </div>
-    <div class="col" >
 
-    </div>
-  </div>
-</div>
 
 
 

@@ -7,7 +7,7 @@ import {  Cadastrarprofessor, } from './cadastrarprofessor';
   providedIn: 'root'
 })
 export class CadastrarprofessorService {
-  url = "  http://localhost:3004/cadastrarprofessor";
+  url = "  http://localhost:8080/professores";
 
   constructor( private http: HttpClient) { }
 
