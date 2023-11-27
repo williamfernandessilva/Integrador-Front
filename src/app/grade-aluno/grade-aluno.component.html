@@ -39,7 +39,17 @@
 <div class="col"  >
   <h1 style="text-align: center;margin-top: 30px;">Grade Alunos</h1>
 
+  <form class="d-flex" style="margin-top:20px; margin-left: 720px; width: 500px;" role="search">
+    <input class="form-control me-2" type="search" placeholder="Digite o nome do professor:" (input)="search($event)"  aria-label="Search">
+  </form>
 
+  <form class="d-flex" style="margin-top:20px; margin-left: 720px; width: 500px;" role="search">
+    <input class="form-control me-2" type="search" placeholder="Digite o curso:" (input)="searchCurso($event)"  aria-label="Search">
+  </form>
+
+  <form class="d-flex" style="margin-top:20px; margin-left: 720px; width: 500px;" role="search">
+    <input class="form-control me-2" type="search" placeholder="Digite sala:" (input)="searchSala($event)"  aria-label="Search">
+  </form>
 
         <div>
         <table style="width: 1200px; margin-left: 350px; margin-top: 50px; " class="table ">
@@ -61,11 +71,11 @@
           <tbody >
 
                   <tr  *ngFor="let cadastrarProfessor of cadastrarProfessor">
-                    <th>{{cadastrarProfessor.nome}}</th>
+                    <th scope="row">{{cadastrarProfessor.nome}}</th>
                     <td>{{cadastrarProfessor.sala}}</td>
                     <td>{{cadastrarProfessor.data}}</td>
-                    <td>{{cadastrarProfessor.materia}}</td>
                     <td>{{cadastrarProfessor.horario}}</td>
+                    <td>{{cadastrarProfessor.materia}}</td>
                     <td>{{cadastrarProfessor.curso}}</td>
                     <td>
                       <button type="button"  style="background-color: red; color: white;   border-radius: 10px; width: 80px; height: 40px; margin-left: 10px;"(click)="delete(cadastrarProfessor)">Excluir</button>

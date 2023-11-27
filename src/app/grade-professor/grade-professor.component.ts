@@ -118,5 +118,22 @@ search(e: Event) {
   });
 }
 
+searchHorario(e: Event) {
+  const target = e.target as HTMLInputElement;
+  const value = target.value;
+  console.log('Valor da pesquisa:', value);
+  this.cadastrarProfessor = this.filter.filter((cadastrarProfessor) => {
+    return cadastrarProfessor.horario?.toLowerCase().includes(value);
+  });
+}
+
+searchMateria(e: Event) {
+  const target = e.target as HTMLInputElement;
+  const value = target.value;
+  console.log('Valor da pesquisa:', value);
+  this.cadastrarProfessor = this.filter.filter((cadastrarProfessor) => {
+    return cadastrarProfessor.materia?.toLowerCase().includes(value);
+  });
+}
 
 }
