@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 export class GradeProfessorComponent {
   cadastrarProfessor : Cadastrarprofessor[] = [];
+  filter : Cadastrarprofessor[] = [];
   isEditing : Boolean = false;
   formGroupClient : FormGroup ;
   CadrastarprofessorService: any;
@@ -32,16 +33,22 @@ horario : ['']
 
 }
 
+
 ngOnInit(): void {
   this.loadProfessor();
+  this.filter = this.cadastrarProfessor;
+
 
 }
 loadProfessor() {
-  this.cadastrarprofessorService.getProfessor().subscribe(
-    {
-      next : data=> this.cadastrarProfessor = data
+
+
+  this.cadastrarprofessorService.getProfessor().subscribe({
+    next: data => {
+      this.cadastrarProfessor = data;
+      this.filter = data;
     }
-  );
+  });
 
 }
 save(){
@@ -100,6 +107,15 @@ delete(cadastrarProfessor: Cadastrarprofessor){
   })
 
 
+}
+
+search(e: Event) {
+  const target = e.target as HTMLInputElement;
+  const value = target.value;
+  console.log('Valor da pesquisa:', value);
+  this.cadastrarProfessor = this.filter.filter((cadastrarProfessor) => {
+    return cadastrarProfessor.nome?.toLowerCase().includes(value);
+  });
 }
 
 
