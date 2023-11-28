@@ -8,6 +8,7 @@ nav {
   border-radius: 10px;
 }
 .logo img {
+  cursor: pointer;
   width: 100px; /* Largura do logotipo */
   height: auto; /* A altura se ajustará automaticamente para manter a proporção */
 }
