@@ -19,19 +19,14 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" routerLink="/cadastro">Tadeu</a>
         </li>
-        <button class="btn btn-danger" style="border-radius: 5px; width: 100px; height: 40px; mb-2" routerLink="/coordenador">Voltar</button>
       </ul>
-      
-      <button class="btn btn-danger" style="border-radius: 5px; width: 100px; height: 40px; mb-2; mb-lg-0" routerLink="/inicio">sair</button>
-      
+      <button class="btn btn-danger" style="border-radius: 5px; width: 100px; height: 40px;" routerLink="/inicio">Sair</button>
     </div>
-    
   </div>
 </nav>
 
 <div class="container mt-3">
   <h1 class="text-center">Cadastrar Professor</h1>
-  
       <div class="mb-2" style="margin-top: 50px; margin-left: 200px; margin-right: 200px;" >
 
 <form  [formGroup]="formGroupClient">
@@ -76,43 +71,41 @@
 </form>
 
 
-
-      </div>
-      <div class="mb-3">
-
+</div>
+<div class="mb-3">
 
 
 
-        <div class="mb-3">
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">Id</th>
-                <th scope="col">Nome</th>
-                <th scope="col">Salas</th>
-                <th scope="col">Data</th>
-                <th scope="col">Matéria</th>
-                <th scope="col">Horario</th>
-                <th scope="col">Curso</th>
-                <th scope="col"></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let cadastrarProfessor of cadastrarProfessor">
-                <th scope="row">{{cadastrarProfessor.id}}</th>
-                <td>{{cadastrarProfessor.nome}}</td>
-                <td>{{cadastrarProfessor.sala}}</td>
-                <td>{{cadastrarProfessor.data}}</td>
-                <td>{{cadastrarProfessor.materia}}</td>
-                <td>{{cadastrarProfessor.horario}}</td>
-                <td>{{cadastrarProfessor.curso}}</td>
-                <td>
-                  <button type="button" class="btn btn-danger" style="border-radius: 10px; width: 80px; height: 40px;" (click)="edit(cadastrarProfessor)">Editar</button>
-                  <button type="button" class="btn btn-danger" style="border-radius: 10px; width: 80px; height: 40px; margin-left: 10px;" (click)="delete(cadastrarProfessor)">Excluir</button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
 
+  <div class="mb-3">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Salas</th>
+          <th scope="col">Data</th>
+          <th scope="col">Matéria</th>
+          <th scope="col">Horario</th>
+          <th scope="col">Curso</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cadastrarProfessor of cadastrarProfessor">
+          <th scope="row">{{cadastrarProfessor.id}}</th>
+          <td>{{cadastrarProfessor.nome}}</td>
+          <td>{{cadastrarProfessor.sala}}</td>
+          <td>{{cadastrarProfessor.data}}</td>
+          <td>{{cadastrarProfessor.materia}}</td>
+          <td>{{cadastrarProfessor.horario}}</td>
+          <td>{{cadastrarProfessor.curso}}</td>
+          <td>
+            <button type="button" class="btn btn-danger" style="border-radius: 10px; width: 80px; height: 40px;" (click)="edit(cadastrarProfessor)">Editar</button>
+            <button type="button" class="btn btn-danger" style="border-radius: 10px; width: 80px; height: 40px; margin-left: 10px;" (click)="delete(cadastrarProfessor)">Excluir</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

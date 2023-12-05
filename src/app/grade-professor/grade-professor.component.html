@@ -2,90 +2,69 @@
   <div class="container-fluid">
     <div class="logo">
       <img src="../assets/logo.png" routerLink="/inicio" alt="Logo da Empresa">
-  </div>
-  <form class="d-flex" style="margin-left: 400px; width: 500px;" role="search">
-    <input class="form-control me-2" type="search" placeholder="Search" (input)="search($event)"  aria-label="Search">
-    <button  style="background-color: red; color: white;   border-radius: 10px;" type="submit">Search</button>
-  </form>
+    </div>
+    <form class="d-flex ms-auto" style="width: 300px;" role="search">
+      <input class="form-control me-2" type="search" placeholder="Search" (input)="search($event)" aria-label="Search">
+      <button class="btn btn-danger" style="border-radius: 10px;" type="submit">Search</button>
+    </form>
 
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+      <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active  margin-left: 60px;" style=" margin-left: 400px;" aria-current="page" routerLink="/alunos">Alunos</a>
-
-       <li>
+          <a class="nav-link active" routerLink="/alunos">Alunos</a>
+        </li>
         <li class="nav-item">
-        <a class="nav-link active" aria-current="page" routerLink="/professores">Professor</a>
-
-        <li>
-          <li class="nav-item">
-          <a class="nav-link active" aria-current="page" style="margin-left: 8 0px;" routerLink="/cadastro">Tadeu</a>
-
-          <li>
-            <li class="nav-item">
-              <li>
-                <li class="nav-item">
-                  <button class="" style="   background-color: rgb(238, 76, 76); color: aliceblue;  border-radius: 5px; width: 100px; height: 40px;" routerLink="/inicio">Sair</button>
-
-
+          <a class="nav-link active" routerLink="/professores">Professor</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/cadastro">Tadeu</a>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-danger" style="border-radius: 5px; width: 100px; height: 40px;" routerLink="/inicio">Sair</button>
+        </li>
       </ul>
     </div>
   </div>
 </nav>
 
 
+  <div class="col text-center">
+    <h1 style="margin-top: 30px;">Grade Professores</h1>
 
+    <form class="d-flex" style="margin-top:20px; width: 100%;" role="search">
+      <input class="form-control me-2" type="search" placeholder="Digite o nome do professor:" (input)="search($event)" aria-label="Search">
+    </form>
 
+    <div>
+      <table class="table" style="width: 100%; margin-top: 20px;">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Salas</th>
+            <th scope="col">Data</th>
+            <th scope="col">Matéria</th>
+            <th scope="col">Horario</th>
+            <th scope="col">Curso</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cadastrarProfessor of cadastrarProfessor">
+            <th scope="row">{{cadastrarProfessor.id}}</th>
+            <td>{{cadastrarProfessor.nome}}</td>
+            <td>{{cadastrarProfessor.sala}}</td>
+            <td>{{cadastrarProfessor.data}}</td>
+            <td>{{cadastrarProfessor.materia}}</td>
+            <td>{{cadastrarProfessor.horario}}</td>
+            <td>{{cadastrarProfessor.curso}}</td>
+            <td>
+              <button class="btn btn-danger" style="border-radius: 10px; width: 80px; height: 40px; margin-left: 10px;" (click)="delete(cadastrarProfessor)">Excluir</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <button class="btn btn-danger" style="margin-top: 20px;  margin-bottom: 20px; width: 200px; height: 80px;" routerLink="/coordenador">Voltar</button>
+  </div>
 
-
-
-    <div class="col"  >
-      <h1 style="text-align: center;margin-top: 30px;">Grade Professores</h1>
-
-      <form class="d-flex" style="margin-top:20px; margin-left: 720px; width: 500px;" role="search">
-        <input class="form-control me-2" type="search" placeholder="Digite o nome do professor:" (input)="search($event)"  aria-label="Search">
-      </form>
-
-            <div>
-            <table style="width: 1200px; margin-left: 350px; margin-top: 50px; " class="table ">
-              <thead>
-                <tr>
-                  <th scope="col">Id</th>
-                  <th scope="col">Nome</th>
-                  <th scope="col">Salas</th>
-                  <th scope="col">Data</th>
-                  <th scope="col">Matéria</th>
-                  <th scope="col">Horario</th>
-                  <th scope="col">Curso</th>
-                  <th scope="col"></th>
-
-
-
-                </tr>
-              </thead>
-              <tbody >
-
-                      <tr  *ngFor="let cadastrarProfessor of cadastrarProfessor">
-                        <th scope="row">{{cadastrarProfessor.id}}</th>
-                        <td >{{cadastrarProfessor.nome}}</td>
-                        <td>{{cadastrarProfessor.sala}}</td>
-                        <td>{{cadastrarProfessor.data}}</td>
-                        <td>{{cadastrarProfessor.materia}}</td>
-                        <td>{{cadastrarProfessor.horario}}</td>
-                        <td>{{cadastrarProfessor.curso}}</td>
-                        <td>
-                          <button type="button"  style="background-color: red; color: white;   border-radius: 10px; width: 80px; height: 40px; margin-left: 10px;"(click)="delete(cadastrarProfessor)">Excluir</button>
-                        </td>
-
-
-                      </tr>
-
-                    </tbody>
-
-                  </table>
-
-
-
-                </div>
-                <button class="" style=" margin-top: 300px; margin-left: 800px; margin-bottom: 20px;  background-color: red; color: aliceblue;  border-radius: 5px; width: 200px; height: 80px;"  routerLink="/coordenador">Voltar</button>
